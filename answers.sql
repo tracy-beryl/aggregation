@@ -1,5 +1,5 @@
 SELECT 
-    paymentDate,SUM(amount) AS total_amount
+    paymentDate,SUM(amount) 
 FROM payments
 GROUP BY paymentDate
 ORDER BY paymentDate DESC
@@ -7,7 +7,7 @@ LIMIT 5;
 
 
 SELECT customerName,country,
-    AVG(creditLimit) AS average_credit_limit
+    AVG(creditLimit) 
 FROM customers
 GROUP BY customerName, country;
     
@@ -15,12 +15,12 @@ GROUP BY customerName, country;
     SELECT 
     productCode,
     quantityOrdered,
-    SUM(priceEach * quantityOrdered) AS total_price
+    SUM(priceEach * quantityOrdered) 
 FROM orderdetails
 GROUP BY productCode, quantityOrdered;
     
     
     SELECT checkNumber,
-    MAX(amount) AS highest_payment_amount
+    MAX(amount) 
 FROM payments
 GROUP BY checkNumber;
